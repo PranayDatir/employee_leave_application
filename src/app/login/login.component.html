@@ -1,0 +1,19 @@
+<!-- <div class="spinner-overlay"> -->
+<app-spinner *ngIf="isLoading()" class="spinner-overlay"></app-spinner>
+<!-- </div> -->
+<div class="container">
+        <div class="login-container">
+            <h3 class="text-center">Login</h3>
+            <form #loginform = "ngForm" (ngSubmit)="login(loginform)">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="emailId" [(ngModel)]="userLogin.emailId" placeholder="Enter your email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" [(ngModel)]="userLogin.password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+            </form>
+        </div>
+    </div>
