@@ -1,1 +1,44 @@
-<p>add-edit-emp works!</p>
+<div class="card-header mt-3 ms-3">
+  <h4>Add Employee</h4>
+</div>
+<div>
+        <form #employeeForm="ngForm" (ngSubmit)="submitForm(employeeForm)">
+          <div class="mb-3">
+              <label for="employeeName" class="form-label ms-3">Name:</label>
+              <input type="text" class="form-control" id="employeeName" name="employeeName" ngModel required>
+          </div>
+          <div class="mb-3">
+              <label for="contactNo" class="form-label ms-3">Mobile:</label>
+              <input type="text" class="form-control" id="contactNo" name="contactNo" ngModel required>
+          </div>
+          <div class="mb-3">
+              <label for="emailId" class="form-label ms-3">Email:</label>
+              <input type="email" class="form-control" id="emailId" name="emailId" ngModel required>
+          </div>
+          <div class="mb-3">
+              <label for="deptId" class="form-label ms-3">Department:</label>
+              <input type="text" class="form-control" id="deptId" name="deptId" ngModel required>
+          </div>
+          <div class="mb-3">
+              <label for="password" class="form-label ms-3">Password:</label>
+              <input type="password" class="form-control" id="password" name="password" ngModel required>
+          </div>
+          <div class="mb-3">
+              <label for="gender" class="form-label ms-3">Gender:</label>
+              <select class="form-select" id="gender" name="gender" ngModel required>
+                  <option value="">Select Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+              </select>
+          </div>
+          <div class="mb-3">
+              <label for="role" class="form-label ms-3">Role:</label>
+              <input type="text" class="form-control" id="role" name="role" ngModel required>
+          </div>
+          <div class="text-center">
+              <button type="submit" class="btn btn-success me-2" [disabled]="employeeForm.invalid">Submit</button>
+              <button type="button" class="btn btn-danger" (click)="this.dialog.closeAll()">Cancel</button>
+          </div>
+      </form>
+</div>

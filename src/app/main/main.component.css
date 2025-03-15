@@ -1,0 +1,10 @@
+.mainBackground{
+    background-color: rgb(125, 230, 125);
+}
+
+.active {
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+  }
+  

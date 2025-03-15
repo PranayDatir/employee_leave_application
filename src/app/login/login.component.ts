@@ -31,8 +31,9 @@ export class LoginComponent {
     this.isLoading.set(true);
     this.authservice.login(form.value).subscribe({
       next: (response: IApiresponse<IEmployee>)=>{
-        console.log(response);
-        this.router.navigateByUrl('main')
+        if(response.result){
+          this.router.navigateByUrl('main');
+        }
       },
       error: (error)=>{
         console.log(error);

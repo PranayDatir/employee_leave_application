@@ -11,6 +11,10 @@ export const routes: Routes = [
         path: 'login', component:LoginComponent, pathMatch:'full'
     },
     {
-        path: 'main', component:MainComponent, pathMatch: 'full'
+        path: 'main', component:MainComponent, 
+        children: [
+            // {path: '',component:EmployeeComponent, pathMatch:'full'},
+            {path: 'employee', component: EmployeeComponent}
+        ]
     }
 ];

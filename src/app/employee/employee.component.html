@@ -1,1 +1,36 @@
-{{employees | json}}
+<div class="container">
+<div class="d-flex justify-content-between mt-2">
+    <span>Employees #{{employeeCount}}</span>
+    <button class="btn btn-info" (click)="addEditEmployee(undefined)">Create</button>
+</div>
+    <table class="table table-responsive">
+        <thead>
+          <tr>
+            <th>Employee Id</th>
+            <th>Employee Name</th>
+            <th>Department Name</th>
+            <th>Contact Number</th>
+            <th>Department Id</th>
+            <th>Role</th>
+            <th>Email</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+            @for (item of employees; track $index) {
+          <tr>
+            <td>{{item.employeeId}}</td>
+            <td>{{item.employeeName}}</td>
+            <td>{{item.deptName}}</td>
+            <td>{{item.contactNo}}</td>
+            <td>{{item.deptId}}</td>
+            <td>{{item.role}}</td>
+            <td>{{item.emailId}}</td>
+            <td>
+              <a (click)="addEditEmployee(item)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+            </td>
+          </tr>
+        }
+        </tbody>
+      </table>
+</div>

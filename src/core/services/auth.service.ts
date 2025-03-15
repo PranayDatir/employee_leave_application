@@ -3,7 +3,8 @@ import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment.development';
 import { IApiresponse } from '../../models/apiResponse.model';
-import { IEmployee, ILoginCredentials } from '../ApiInterface/AuthInterface';
+import {  ILoginCredentials } from '../ApiInterface/AuthInterface';
+import { IEmployee } from '../../models/employee.model';
 
 @Injectable({
   providedIn: 'root'
